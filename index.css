@@ -99,7 +99,7 @@ body{
     content:"";
     position: absolute;
     inset: 0;
-    background: url("./images/index/Th075Cover.jpg") center 30% /cover no-repeat;
+    background: url("./images/index/Th075cover.jpg") center 30% /cover no-repeat;
     opacity: 0.4;
     z-index:-1;
     }
@@ -108,7 +108,7 @@ body{
     content:"";
     position: absolute;
     inset: 0;
-    background: url("./images/index/Th08Cover.jpg") center 30% /cover no-repeat;
+    background: url("./images/index/Th08cover.jpg") center 30% /cover no-repeat;
     opacity: 0.4;
     z-index:-1;
     }
@@ -117,7 +117,7 @@ body{
     content:"";
     position: absolute;
     inset: 0;
-    background: url("./images/index/Th09Cover.jpg") center 30% /cover no-repeat;
+    background: url("./images/index/Th09cover.jpg") center 30% /cover no-repeat;
     opacity: 0.4;
     z-index:-1;
     }
@@ -126,7 +126,7 @@ body{
     content:"";
     position: absolute;
     inset: 0;
-    background: url("./images/index/Th095Cover.jpg") center 30% /cover no-repeat;
+    background: url("./images/index/Th095cover.jpg") center 30% /cover no-repeat;
     opacity: 0.4;
     z-index:-1;
     }
@@ -135,7 +135,7 @@ body{
     content:"";
     position: absolute;
     inset: 0;
-    background: url("./images/index/Th10Cover.jpg") center 30% /cover no-repeat;
+    background: url("./images/index/Th10cover.jpg") center 30% /cover no-repeat;
     opacity: 0.4;
     z-index:-1;
     }

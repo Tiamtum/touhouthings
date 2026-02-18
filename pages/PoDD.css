@@ -1,0 +1,24 @@
+body{
+    display: grid;
+    background: url("../images/bg.gif");
+    color:rgb(229, 228, 226);
+    font-family: "Noto Serif JP", serif;
+    font-size:xx-large;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.prologue{
+    height:auto;
+    width: 1200px;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+.name{
+    font-weight: bolder;
+    text-decoration: underline;
+    color:rgb(245, 215, 155)
+}

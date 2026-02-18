@@ -1,0 +1,146 @@
+body{
+    display: grid;
+    background: url("./images/bg.gif");
+    color:rgb(229, 228, 226);
+    grid-gap: 1rem;
+    grid-template-columns: 200px repeat(3, 1fr);
+    grid-template-rows: 80px repeat(2, 1fr);
+    grid-template-areas:
+        "header header header header"
+        "sidebar card1 card2 card3"
+        "sidebar card4 card5 card6"
+        "sidebar card7 card7_5 card8"
+        "sidebar card9 card9_5 card10";
+    font-family: "Noto Serif JP", serif;
+}
+  h1{ 
+    grid-area: header; 
+}
+  nav{ 
+    grid-area: sidebar; 
+    border-right: 1px double white; 
+    padding-right: 0.5rem;
+}
+  .card{
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; 
+    height:300px; 
+    border: 1px solid red;
+    overflow: hidden;
+}
+    .card1{ grid-area: card1; }
+    .card1::before{
+        content:"";
+        position: absolute;
+        inset: 0;
+        background: url("./images/index/Th01cover.jpg") center 30% /cover no-repeat;
+        opacity: 0.4;
+        z-index:-1;
+    }
+    .card2{ grid-area: card2; }
+    .card2::before{
+        content:"";
+        position: absolute;
+        inset: 0;
+        background: url("./images/index/Th02cover.jpg") center 30% /cover no-repeat;
+        opacity: 0.4;
+        z-index:-1;
+    }
+    .card3{ grid-area: card3; }
+    .card3::before{
+        content:"";
+        position: absolute;
+        inset: 0;
+        background: url("./images/index/Th03cover.jpg") center 30% /cover no-repeat;
+        opacity: 0.4;
+        z-index:-1;
+    }
+    .card4{ grid-area: card4; }
+    .card4::before{
+        content:"";
+        position: absolute;
+        inset: 0;
+        background: url("./images/index/Th04cover.jpg") center 30% /cover no-repeat;
+        opacity: 0.4;
+        z-index:-1;
+    }
+    .card5{ grid-area: card5; }
+    .card5::before{
+        content:"";
+        position: absolute;
+        inset: 0;
+        background: url("./images/index/Th05cover.jpg") center 30% /cover no-repeat;
+        opacity: 0.4;
+        z-index:-1;
+    }
+    .card6{ grid-area: card6; }
+    .card6::before{
+        content:"";
+        position: absolute;
+        inset: 0;
+        background: url("./images/index/Th06cover.jpg") center 30% /cover no-repeat;
+        opacity: 0.4;
+        z-index:-1;
+    }
+    .card7{ grid-area: card7; }
+    .card7::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: url("./images/index/Th07cover.jpg") center 30% /cover no-repeat;
+    opacity: 0.4;
+    z-index:-1;
+    }
+    .card7_5{ grid-area: card7_5; }
+    .card7_5::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: url("./images/index/Th075Cover.jpg") center 30% /cover no-repeat;
+    opacity: 0.4;
+    z-index:-1;
+    }
+    .card8{ grid-area: card8; }
+    .card8::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: url("./images/index/Th08Cover.jpg") center 30% /cover no-repeat;
+    opacity: 0.4;
+    z-index:-1;
+    }
+    .card9{ grid-area: card9; }
+    .card9::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: url("./images/index/Th09Cover.jpg") center 30% /cover no-repeat;
+    opacity: 0.4;
+    z-index:-1;
+    }
+    .card9_5{ grid-area: card9_5;}
+    .card9_5::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: url("./images/index/Th095Cover.jpg") center 30% /cover no-repeat;
+    opacity: 0.4;
+    z-index:-1;
+    }
+    .card10{ grid-area: card10; }
+    .card10::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: url("./images/index/Th10Cover.jpg") center 30% /cover no-repeat;
+    opacity: 0.4;
+    z-index:-1;
+    }
+
+a{
+    color:rgb(229, 228, 226);
+    text-decoration: none;
+}

@@ -9,6 +9,8 @@ body{
     grid-template-rows: 80px auto 1fr;
     grid-template-areas:
         "header header header header"
+        "sidebar oCCHeader oCCHeader oCCHeader"
+        "sidebar occImg occImg occImg"
         "sidebar gameHeader gameHeader gameHeader"
         "sidebar card1 card2 card3"
         "sidebar card1 card2 card3"
@@ -24,9 +26,15 @@ body{
         "sidebar card18_5 card19 card20"   
         "sidebar characterHeader characterHeader characterHeader" 
 }
-  h1{ 
+h1{ 
     grid-area: header;
     margin-left:1rem;  
+}
+img{
+    grid-area: occImg;
+    background: rgba(255, 255, 255, 0.9);
+    margin-left:auto;
+    margin-right: auto;
 }
 #tocGames{
     grid-area: gameHeader;
@@ -34,6 +42,10 @@ body{
 }
 #tocCharacters{
     grid-area: characterHeader;
+    margin-left: 1rem;
+}
+#toc1CCProgress{
+    grid-area: oCCHeader;
     margin-left: 1rem;
 }
   nav{ 

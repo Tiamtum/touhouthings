@@ -1,366 +1,56 @@
 body{
-    display: grid;
-    font-family: "Noto Serif JP", serif;
-    background: url("./images/bg.gif");
-    color:rgb(229, 228, 226);
-    grid-gap: 1rem;
-    grid-template-columns: 300px repeat(3, 1fr);
-    grid-template-rows: 80px repeat(2, 1fr);
-    grid-template-rows: 80px auto 1fr;
-    grid-template-areas:
-        "header header header header"
-        "sidebar oCCHeader oCCHeader oCCHeader"
-        "sidebar occImg occImg occImg"
-        "sidebar gameHeader gameHeader gameHeader"
-        "sidebar card1 card2 card3"
-        "sidebar card1 card2 card3"
-        "sidebar card4 card5 card6"
-        "sidebar card7 card7_5 card8"
-        "sidebar card9 card9_5 card10"
-        "sidebar card10_5 card11 card12"
-        "sidebar card12_3 card12_5 card12_8"
-        "sidebar card13 card13_5 card14"
-        "sidebar card14_3 card14_5 card15"
-        "sidebar card15_5 card16 card16_5"
-        "sidebar card17 card17_5 card18"
-        "sidebar card18_5 card19 card20"   
-        "sidebar characterHeader characterHeader characterHeader" 
+  display:grid;
+  grid-template-columns:300px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  gap:1rem;
+  font-family:"Noto Serif JP", serif;
+  background:url("./images/bg.gif");
+  color:rgb(229,228,226);
+  font-size:x-large;
 }
-h1{ 
-    grid-area: header;
-    margin-left:1rem;  
+a{
+    color: cyan;
 }
-img{
+.cardGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1rem;
+  margin-right:1rem;
+}
+.card{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+  height:300px;
+  border:1px solid red;
+  overflow:hidden;
+}
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--bg) center 30% / cover no-repeat;
+  opacity:0.4;
+  z-index:-1;
+}
+.card h3{
+  position:relative;
+  z-index:1;
+}
+.card a{
+  color:rgb(229,228,226);
+  text-decoration: none;
+}
+.header{ grid-area:header; margin-left:1rem; }
+.sidebar{ grid-area:sidebar; margin-left:1rem; }
+.main{ grid-area:main; display:flex; flex-direction:column; gap:1rem; }
+.occImg{
     grid-area: occImg;
     background: rgba(255, 255, 255, 0.9);
     margin-left:auto;
     margin-right: auto;
-}
-#tocGames{
-    grid-area: gameHeader;
-    margin-left: 1rem;
-}
-#tocCharacters{
-    grid-area: characterHeader;
-    margin-left: 1rem;
-}
-#toc1CCProgress{
-    grid-area: oCCHeader;
-    margin-left: 1rem;
-}
-  nav{ 
-    grid-area: sidebar;
-    margin-left:1rem; 
-}
-  .card{
-    position: relative; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto; 
-    height:300px; 
-    border: 1px solid red;
-    overflow: hidden;
-}
-    .card1{ grid-area: card1; }
-    .card1::before{
-        content:"";
-        position: absolute;
-        inset: 0;
-        background: url("./images/index/Th01cover.jpg") center 30% /cover no-repeat;
-        opacity: 0.4;
-        z-index:-1;
-    }
-    .card2{ grid-area: card2; }
-    .card2::before{
-        content:"";
-        position: absolute;
-        inset: 0;
-        background: url("./images/index/Th02cover.jpg") center 30% /cover no-repeat;
-        opacity: 0.4;
-        z-index:-1;
-    }
-    .card3{ grid-area: card3; margin-right: 1rem; }
-    .card3::before{
-        content:"";
-        position: absolute;
-        inset: 0;
-        background: url("./images/index/Th03cover.jpg") center 30% /cover no-repeat;
-        opacity: 0.4;
-        z-index:-1;
-    }
-    .card4{ grid-area: card4; }
-    .card4::before{
-        content:"";
-        position: absolute;
-        inset: 0;
-        background: url("./images/index/Th04cover.jpg") center 30% /cover no-repeat;
-        opacity: 0.4;
-        z-index:-1;
-    }
-    .card5{ grid-area: card5; }
-    .card5::before{
-        content:"";
-        position: absolute;
-        inset: 0;
-        background: url("./images/index/Th05cover.jpg") center 30% /cover no-repeat;
-        opacity: 0.4;
-        z-index:-1;
-    }
-    .card6{ grid-area: card6; margin-right: 1rem; }
-    .card6::before{
-        content:"";
-        position: absolute;
-        inset: 0;
-        background: url("./images/index/Th06cover.jpg") center 30% /cover no-repeat;
-        opacity: 0.4;
-        z-index:-1;
-    }
-    .card7{ grid-area: card7; }
-    .card7::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th07cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card7_5{ grid-area: card7_5; }
-    .card7_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th075cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card8{ grid-area: card8; margin-right: 1rem; }
-    .card8::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th08cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card9{ grid-area: card9; }
-    .card9::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th09cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card9_5{ grid-area: card9_5;}
-    .card9_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th095cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card10{ grid-area: card10; margin-right: 1rem; }
-    .card10::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th10cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card10_5{ grid-area: card10_5; margin-right: 1rem; }
-    .card10_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th105cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card11{ grid-area: card11; margin-right: 1rem; }
-    .card11::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th11cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card12{ grid-area: card12; margin-right: 1rem; }
-    .card12::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th12cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card12_3{ grid-area: card12_3; margin-right: 1rem; }
-    .card12_3::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th123cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card12_5{ grid-area: card12_5; margin-right: 1rem; }
-    .card12_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th125cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card12_8{ grid-area: card12_8; margin-right: 1rem; }
-    .card12_8::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th128cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card13{ grid-area: card13; margin-right: 1rem; }
-    .card13::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th13cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card13_5{ grid-area: card13_5; margin-right: 1rem; }
-    .card13_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th135cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card14{ grid-area: card14; margin-right: 1rem; }
-    .card14::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th14cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card14_3{ grid-area: card14_3; margin-right: 1rem; }
-    .card14_3::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th143cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card14_5{ grid-area: card14_5; margin-right: 1rem; }
-    .card14_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th145cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card15{ grid-area: card15; margin-right: 1rem; }
-    .card15::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th15cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card15_5{ grid-area: card15_5; margin-right: 1rem; }
-    .card15_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th155cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card16{ grid-area: card16; margin-right: 1rem; }
-    .card16::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th16cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card16_5{ grid-area: card16_5; margin-right: 1rem; }
-    .card16_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th165cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card17{ grid-area: card17; margin-right: 1rem; }
-    .card17::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th17cover.png") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card17_5{ grid-area: card17_5; margin-right: 1rem; }
-    .card17_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th175cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card18{ grid-area: card18; margin-right: 1rem; }
-    .card18::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th18cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card18_5{ grid-area: card18_5; margin-right: 1rem; }
-    .card18_5::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th185cover.png") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card19{ grid-area: card19; margin-right: 1rem; }
-    .card19::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th19cover.png") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-    .card20{ grid-area: card20; margin-right: 1rem; }
-    .card20::before{
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: url("./images/index/Th20cover.jpg") center 30% /cover no-repeat;
-    opacity: 0.4;
-    z-index:-1;
-    }
-
-a{
-    color:rgb(229, 228, 226);
-    text-decoration: none;
 }

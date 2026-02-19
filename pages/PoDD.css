@@ -5,6 +5,9 @@ body{
     font-family: "Noto Serif JP", serif;
     font-size:xx-large;
 }
+a{
+    color:cyan;
+}
 main{
     display:flex;
     flex-direction: column;
@@ -21,4 +24,17 @@ main{
     font-weight: bolder;
     text-decoration: underline;
     color:rgb(245, 215, 155)
+}
+.tocLink{
+    text-decoration: none;
+}
+table{
+    text-align: center;
+}
+th{
+    height:50px;
+    width:50px;
+}
+.clear{
+    background: #FF5C5C;
 }

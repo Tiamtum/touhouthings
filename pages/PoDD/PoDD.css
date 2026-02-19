@@ -1,9 +1,9 @@
 body{
     display: grid;
-    background: url("../images/bg.gif");
+    background: url("../../images/bg.gif");
     color:rgb(229, 228, 226);
     font-family: "Noto Serif JP", serif;
-    font-size:xx-large;
+    font-size:x-large;
 }
 a{
     color:cyan;
@@ -13,12 +13,10 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 .prologue{
     height:auto;
-    width: 1200px;
-    background-color: rgba(0, 0, 0, 0.9)
+    width: 1600px;
 }
 .name{
     font-weight: bolder;
@@ -37,4 +35,13 @@ th{
 }
 .clear{
     background: #FF5C5C;
+}
+.characterBio{
+  display: flex;       
+  align-items: center; 
+  gap: 10px;           
+}
+.characterBio img{
+  width: auto;         
+  height: 360px;
 }

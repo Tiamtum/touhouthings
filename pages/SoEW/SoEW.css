@@ -39,8 +39,8 @@ th{
 .characterBio{
   display: flex;       
   align-items: center; 
-  gap: 10px;   
-  width:1600px;            
+  gap: 10px;  
+  width:1600px;        
 }
 .characterBio img{
   width: auto;         
